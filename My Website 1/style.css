@@ -4,8 +4,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    row-gap: 50px;
     margin: 0;
     padding: 0;
     background-color: #333;
     color: white;
+    font-family: sans-serif;
+}
+
+.heart {
+    font-size: 50px;
+    animation: beat 0.2s linear infinite alternate;
+    position: absolute;
+    transform: translateY(50px);
+}
+
+@keyframes beat {
+    from {
+        font-size: 10px;
+    }
+    
+    to {
+        font-size: 50px;
+    }
 }
