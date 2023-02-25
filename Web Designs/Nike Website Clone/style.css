@@ -140,17 +140,32 @@ main > .featured-products > .featured-products-header {
 
 main > .featured-products > .featured-products-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 45%);
-    grid-template-rows: 200px;
-    justify-content: center;
+    grid-template-columns: repeat(5, 45%);
     grid-gap: 5px;
     overflow-x: scroll;
     margin-top: 20px;
     width: 100%;
-    border: 1px solid red;
+    scroll-snap-type: x mandatory;
 }
 
 main > .featured-products > .featured-products-wrapper .featured {
     height: 200px;
     border: 1px solid black;
+    border-radius: 5px;
+    scroll-snap-align: start;
+    padding: 5px;
+}
+
+.featured-products-wrapper .featured img {
+    border-radius: 5px;
+}
+
+.featured-products-wrapper .featured p {
+    margin: 0 10px;
+    font-size: 0.8em;
+}
+
+.featured-products-wrapper .featured p.shoe-name {
+    font-size: 1em;
+    font-weight: bold;
 }
