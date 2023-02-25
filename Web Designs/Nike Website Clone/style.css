@@ -39,7 +39,7 @@ main {
 }
 
 main > div.marquee {
-    background-color: #D5D1D1;
+    background-color: #DBDCE3;
     width: 100%;
     overflow-x: hidden;
     white-space: nowrap;
@@ -48,10 +48,14 @@ main > div.marquee {
 
 main > div.marquee div {
     width: 100%;
-    font-weight: bold;
     text-align: center;
     display: inline-block;
-    animation: slide 10s linear infinite alternate;
+    animation: slide 10s 5s linear infinite;
+}
+
+main > div.marquee div > p:nth-child(2) {
+    font-weight: normal;
+    font-size: 0.8em;
 }
 
 @keyframes slide {
@@ -73,12 +77,26 @@ main > .hero-section {
     align-items: center;
 }
 
+main > .hero-section > .hero-buttons {
+    display: flex;
+    gap: 20px
+}
+
 main > .hero-section > .hero-buttons button {
-    height: 30px;
-    width: 100px;
+    height: 40px;
+    width: 120px;
     background-color: black;
     color: white;
     font-weight: bold;
+    border-radius: 10px;
+}
+
+main > .hero-section > .hero-buttons button:hover {
+    border-color: red;
+}
+
+main > .sec {
+    height: 100vh;
 }
 
 .error-msg {
@@ -106,4 +124,33 @@ main > .hero-section > .hero-buttons button {
         font-size: 200%;
         text-align: center;
     }
+}
+
+main > .featured-products {
+    padding: 5px;
+}
+
+main > .featured-products > .featured-products-header {
+    background-color: #DBDCE3;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > .featured-products > .featured-products-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 45%);
+    grid-template-rows: 200px;
+    justify-content: center;
+    grid-gap: 5px;
+    overflow-x: scroll;
+    margin-top: 20px;
+    width: 100%;
+    border: 1px solid red;
+}
+
+main > .featured-products > .featured-products-wrapper .featured {
+    height: 200px;
+    border: 1px solid black;
 }
