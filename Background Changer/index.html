@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Background Changer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body id="body">
+    <div>
+        <h1>Background Changer</h1>
+        <input type="text" id="color-input" placeholder="Type Color">
+       <button id="change-button">CHANGE</button>
+       <p id="current-color">Current color: White</p>
+    </div>
+    
+    <script>
+        let colorInput = document.getElementById("color-input");
+        let button = document.getElementById("change-button");
+        
+        button.onclick = function() {
+            document.getElementById("body").style.backgroundColor = colorInput.value;
+            document.getElementById("current-color").textContent = "Current color: " + colorInput.value;
+        }
+    </script>
+</body>
+</html>
