@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drawing App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>DRAWING APP</h1>
+    <p>Made by: Someone</p>
+    <div class="container">
+        <canvas id="canvas"></canvas>
+        <div class="menu">
+            <div class="color-picker">
+                <div data-status="unselected" data-color="white" class="color" data-status=""></div>
+                <div data-status="selected" data-color="black"class="color"></div>
+                <div data-status="unselected" data-color="blue" class="color"></div>
+                <div data-status="unselected" data-color="red" class="color"></div>
+                <div data-status="unselected" data-color="green" class="color"></div>
+                <div data-status="unselected" data-color="yellow" class="color"></div>
+                <div data-status="unselected" data-color="brown" class="color"></div>
+                <div data-status="unselected" data-color="purple" class="color"></div>
+            </div>
+            <div class="brush-size-picker-wrapper">
+                <label for="brush-size-picker">Brush Size:</label>
+                <input type="range" id="brush-size-picker" min="1" max="10" value="1">
+                <span id="brush-size-display">1</span>
+                <button id="clear-button">CLEAR</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

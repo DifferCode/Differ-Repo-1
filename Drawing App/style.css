@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+}
+
+.container {
+    padding: 5px;
+    border: 1px solid black;
+    max-width: 400px;
+    background-color: #7883FF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#canvas {
+    border: 1px solid black;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.menu {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #B0B7FF;
+}
+
+.color-picker {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.color {
+    width: 35px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: red;
+    flex-basis: 1;
+    border: 1px solid black;
+}
+
+.color[data-color="black"] {
+    background-color: black;
+}
+.color[data-color="white"] {
+    background-color: white;
+}
+.color[data-color="blue"] {
+    background-color: blue;
+}
+.color[data-color="red"] {
+    background-color: red;
+}
+.color[data-color="green"] {
+    background-color: green;
+}
+.color[data-color="yellow"] {
+    background-color: yellow;
+}
+.color[data-color="brown"] {
+    background-color: brown;
+}
+.color[data-color="purple"] {
+    background-color: purple;
+}
+
+.brush-size-picker-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#clear-button {
+    width: 80px;
+    margin-left: auto;
+    height: 30px;
+}
+
+#brush-size-picker {
+    accent-color: black;
+}
+
+.color[data-status="selected"] {
+    transform: scale(1.1);
+    border-width: 2px;
+}
