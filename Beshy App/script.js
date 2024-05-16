@@ -4,7 +4,7 @@ let copyButton = document.getElementById("copy-button");
 let clearButton = document.getElementById("clear-button");
 
 input.addEventListener('input', () => {
-    let text = input.value.replaceAll(" ", "🤸");
+    let text = input.value.replaceAll(" ", "bobo ka nimal");
     output.textContent = text;
 });
 

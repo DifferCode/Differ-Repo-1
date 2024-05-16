@@ -1,0 +1,38 @@
+#board {
+    border: 1px solid black;
+}
+
+#gameContainer {
+    text-align: center;
+}
+
+#score-display {
+    font-size: 2em;
+    font-family: "Permanent Marker";
+}
+
+.buttons {
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.up-button-wrapper, .down-button-wrapper {
+    flex-basis: 100%;
+}
+
+.left-button-wrapper, .right-button-wrapper {
+    flex-basis: 48%;
+}
+
+.right-button-wrapper {
+   align-self: flex-end;
+}
+
+.buttons > div > button {
+    width: 40px;
+    height: 40px;
+}

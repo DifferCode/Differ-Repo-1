@@ -95,6 +95,7 @@ main > div {
     background-color: black;
     padding: 20px;
     overflow-y: auto;
+    margin: 0;
 }
 
 #productsSection > h2 {
@@ -203,6 +204,7 @@ main > div {
     background-color: black;
     background: url(images/contact-section-bg2.jpeg) no-repeat center;
     background-size: 100% 100%;
+    margin: 0;
 }
 
 #contactSection > h2 {
