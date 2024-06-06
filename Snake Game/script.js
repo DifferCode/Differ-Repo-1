@@ -6,7 +6,7 @@ let resetButton = document.getElementById("reset-button");
 let scoreDisplay = document.getElementById("score-display");
 let ctx = board.getContext("2d");
 let backgroundColor = "white";
-let snakeColor = "magenta";
+let snakeColor = "yellow";
 let snakeBorder = "black";
 let foodColor = "red";
 let foodBorder = "black";
@@ -94,7 +94,7 @@ function nextTick() {
             drawSnake();
             checkGameOver();
             nextTick();
-        }, 75);
+        }, 100);
     }else {
         displayGameOver();
     }
@@ -104,7 +104,7 @@ function displayGameOver() {
     ctx.fillStyle = "black";
     ctx.font = "25px MV Boli";
     ctx.textAlign = "center";
-    ctx.fillText("BOBO MO TANGA HAHA", gameWidth / 2, gameHeight / 2);
+    ctx.fillText("I MISS YOU <3", gameWidth / 2, gameHeight / 2);
 }
 
 function checkGameOver() {
@@ -146,12 +146,18 @@ function moveSnake() {
 }
 
 function drawSnake() {
-    ctx.fillStyle = snakeColor;
+    ctx.fillStyle = randomColor();
     ctx.strokeStyle = snakeBorder;
     snake.forEach(snakePart => {
         ctx.fillRect(snakePart.x, snakePart.y, unitSize, unitSize);
         ctx.strokeRect(snakePart.x, snakePart.y, unitSize, unitSize);
     });
+}
+
+function randomColor() {
+    let colors = ["blue", "red", "yellow", "green", "violet", "pink", "orange"];
+    let randomColorIndex = Math.round(Math.random() * 6) + 1;
+    return colors[randomColorIndex];
 }
 
 function clearBoard() {
