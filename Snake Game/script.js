@@ -6,7 +6,7 @@ let resetButton = document.getElementById("reset-button");
 let scoreDisplay = document.getElementById("score-display");
 let ctx = board.getContext("2d");
 let backgroundColor = "white";
-let snakeColor = "yellow";
+let snakeColor = "green";
 let snakeBorder = "black";
 let foodColor = "red";
 let foodBorder = "black";
@@ -146,7 +146,7 @@ function moveSnake() {
 }
 
 function drawSnake() {
-    ctx.fillStyle = randomColor();
+    ctx.fillStyle = snakeColor;
     ctx.strokeStyle = snakeBorder;
     snake.forEach(snakePart => {
         ctx.fillRect(snakePart.x, snakePart.y, unitSize, unitSize);
