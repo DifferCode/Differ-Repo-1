@@ -7,6 +7,7 @@ body {
     flex-direction: column;
     background-color: pink;
     position: relative;
+    font-family: sans-serif;
 }
 
 * {
